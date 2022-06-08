@@ -10,10 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CosumeViewDemo">
         <activity
-            android:name="com.hcmes.viewdemo.l1.Lin1Activity"
+            android:name=".l2.Lin2Activity"
             android:exported="true" />
         <activity
-            android:name="com.hcmes.viewdemo.MainActivity"
+            android:name=".l1.Lin1Activity"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
