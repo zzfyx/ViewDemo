@@ -11,5 +11,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         var intent=Intent(baseContext,Lin1Activity::class.java)
         startActivity(intent)
+        "0000000000000000000000000000"
     }
 }
