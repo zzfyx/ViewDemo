@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.hcmes.cosumeviewdemo">
+    package="com.hcmes.viewdemo">
 
     <application
         android:allowBackup="true"
@@ -10,10 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CosumeViewDemo">
         <activity
-            android:name=".l1.Lin1Activity"
+            android:name="com.hcmes.viewdemo.l1.Lin1Activity"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name="com.hcmes.viewdemo.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

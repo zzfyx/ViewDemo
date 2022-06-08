@@ -1,9 +1,9 @@
-package com.hcmes.cosumeviewdemo
+package com.hcmes.viewdemo
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.hcmes.cosumeviewdemo.l1.Lin1Activity
+import com.hcmes.viewdemo.l1.Lin1Activity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

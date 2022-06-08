@@ -1,4 +1,4 @@
-package com.hcmes.cosumeviewdemo.l1
+package com.hcmes.viewdemo.l1
 
 import android.content.Context
 import android.graphics.*

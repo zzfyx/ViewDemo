@@ -1,4 +1,4 @@
-package com.hcmes.cosumeviewdemo
+package com.hcmes.viewdemo
 
 import org.junit.Test
 

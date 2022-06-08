@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".l1.Lin1Activity">
-    <com.hcmes.cosumeviewdemo.l1.BasisView
+    <com.hcmes.viewdemo.l1.BasisView
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
