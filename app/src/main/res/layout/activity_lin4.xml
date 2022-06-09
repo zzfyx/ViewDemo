@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="10dp"
+    android:layout_marginRight="10dp"
+    tools:context=".l4.Lin4Activity">
+
+
+    <ImageView
+        android:id="@+id/item1"
+        style="@style/MenuItemStyle"
+        android:src="@drawable/circle1"
+        ></ImageView>
+    <ImageView
+        android:id="@+id/item2"
+        style="@style/MenuItemStyle"
+        android:src="@drawable/circle2"
+        ></ImageView>
+    <ImageView
+        android:id="@+id/item3"
+        style="@style/MenuItemStyle"
+        android:src="@drawable/circle3"
+        ></ImageView>
+    <ImageView
+        android:id="@+id/item4"
+        style="@style/MenuItemStyle"
+        android:src="@drawable/circle4"
+        ></ImageView>
+    <ImageView
+        android:id="@+id/item5"
+        style="@style/MenuItemStyle"
+        android:src="@drawable/circle5"
+        ></ImageView>
+    <ImageView
+        android:id="@+id/menu"
+        style="@style/MenuStyle"
+        android:src="@drawable/scan_circle"
+        ></ImageView>
+
+</FrameLayout>

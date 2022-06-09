@@ -52,7 +52,7 @@ class LoadingImageView: AppCompatImageView{
         animator.setEvaluator(ReverseEvaluator())
         animator.addListener(object:Animator.AnimatorListener{
             override fun onAnimationStart(p0: Animator?) {
-                setImageDrawable(resources.getDrawable(R.drawable.pic1))
+                setImageDrawable(resources.getDrawable(R.drawable.pic_1))
             }
 
             override fun onAnimationEnd(p0: Animator?) {
@@ -66,9 +66,9 @@ class LoadingImageView: AppCompatImageView{
             override fun onAnimationRepeat(p0: Animator?) {
                 mCurrentImgIndex++
                 when (mCurrentImgIndex%mImgCount){
-                    0->   setImageDrawable(resources.getDrawable(R.drawable.pic1))
-                    1->   setImageDrawable(resources.getDrawable(R.drawable.pic2))
-                    2->   setImageDrawable(resources.getDrawable(R.drawable.pic3))
+                    0->   setImageDrawable(resources.getDrawable(R.drawable.pic_1))
+                    1->   setImageDrawable(resources.getDrawable(R.drawable.pic_2))
+                    2->   setImageDrawable(resources.getDrawable(R.drawable.pic_3))
                 }
             }
         })

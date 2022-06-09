@@ -28,7 +28,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginTop="20dp"
-        android:src="@drawable/pic1"
+        android:src="@drawable/pic_1"
         />
 
 </LinearLayout>
