@@ -1,14 +1,17 @@
 package com.hcmes.viewdemo.l2
 
+import android.graphics.drawable.AnimationDrawable
+import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.view.LayoutInflater
 import android.view.animation.*
+import android.widget.Toast
 import com.hcmes.viewdemo.R
 import com.hcmes.viewdemo.databinding.ActivityL2Binding
-
+//视图动画 补间动画
 class Lin2Activity : AppCompatActivity() {
    lateinit var binding:ActivityL2Binding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -87,5 +90,12 @@ class Lin2Activity : AppCompatActivity() {
         binding.circlel3.startAnimation(scan3)
         scan4.startOffset=1800
         binding.circlel4.startAnimation(scan4)
+
+       var animationDrawable= binding.circlel5.drawable as AnimationDrawable
+        animationDrawable.start()
+        //通过文件名称拿到id
+       var d= resources.getIdentifier("frameanim","drawable",packageName)
+
+        Toast.makeText(this,d.toString(),Toast.LENGTH_LONG).show()
     }
 }

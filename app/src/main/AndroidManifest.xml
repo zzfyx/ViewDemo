@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CosumeViewDemo">
         <activity
+            android:name=".l3.Lin3Activity"
+            android:exported="true" />
+        <activity
             android:name=".l2.Lin2Activity"
             android:exported="true" />
         <activity

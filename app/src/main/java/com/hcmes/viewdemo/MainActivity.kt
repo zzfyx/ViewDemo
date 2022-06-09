@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.hcmes.viewdemo.l2.Lin2Activity
 import com.hcmes.viewdemo.l1.Lin1Activity
+import com.hcmes.viewdemo.l3.Lin3Activity
 import java.util.ArrayList
 
 class MainActivity : AppCompatActivity() {
@@ -20,7 +21,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         array.add(ListDemo("画布",Lin1Activity::class.java))
-        array.add(ListDemo("动画",Lin2Activity::class.java))
+        array.add(ListDemo("补间动画",Lin2Activity::class.java))
+        array.add(ListDemo("属性动画", Lin3Activity::class.java))
         recyclerView=  findViewById<RecyclerView>(R.id.recyclerView);
         var manager=  LinearLayoutManager(this@MainActivity)
         manager.setOrientation(RecyclerView.VERTICAL)
