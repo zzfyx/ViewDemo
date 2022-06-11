@@ -1,14 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginBottom="10dp"
     android:layout_marginRight="10dp"
+    android:orientation="vertical"
+    android:id="@+id/rootView1"
     tools:context=".l4.Lin4Activity">
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="属性动画xml"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:background="@drawable/circle1"
+        ></TextView>
 
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ProPertyViewHolder"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:background="@drawable/circle4"
+        ></TextView>
 
+    <com.hcmes.viewdemo.l4.MyTextView
+        android:id="@+id/tv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="点击a到z"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="@color/black"
+        ></com.hcmes.viewdemo.l4.MyTextView>
+
+    <TextView
+        android:id="@+id/tv4"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:text="电话keyFrame"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@mipmap/phone"
+        android:textColor="@color/black"
+        ></TextView>
+    <FrameLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        tools:context=".l4.Lin4Activity">
     <ImageView
         android:id="@+id/item1"
         style="@style/MenuItemStyle"
@@ -39,5 +88,5 @@
         style="@style/MenuStyle"
         android:src="@drawable/scan_circle"
         ></ImageView>
-
-</FrameLayout>
+    </FrameLayout>
+</LinearLayout>

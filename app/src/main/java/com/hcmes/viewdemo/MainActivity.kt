@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         array.add(ListDemo("画布",Lin1Activity::class.java))
         array.add(ListDemo("补间动画和帧动画 （视图动画）",Lin2Activity::class.java))
         array.add(ListDemo("属性动画", Lin3Activity::class.java))
-        array.add(ListDemo("路径动画", Lin4Activity::class.java))
+        array.add(ListDemo("布局动画", Lin4Activity::class.java))
         recyclerView=  findViewById<RecyclerView>(R.id.recyclerView);
         var manager=  LinearLayoutManager(this@MainActivity)
         manager.setOrientation(RecyclerView.VERTICAL)

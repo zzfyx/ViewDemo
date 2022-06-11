@@ -24,7 +24,6 @@ private val valueAnimator: ValueAnimator?
     }
 
 
-
 class LoadingImageView: AppCompatImageView{
     constructor(context: Context) : super(context){
 
