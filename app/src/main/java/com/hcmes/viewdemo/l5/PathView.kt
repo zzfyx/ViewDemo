@@ -7,6 +7,7 @@ import android.util.AttributeSet
 import android.util.Log
 import android.view.View
 import android.view.animation.BounceInterpolator
+import com.hcmes.viewdemo.R
 
 class PathView: View{
     constructor(context: Context?) : super(context)
@@ -23,6 +24,7 @@ class PathView: View{
     var currentFloat:Float=0f
     fun init(){
         setLayerType(LAYER_TYPE_SOFTWARE,null)
+        mArrayBmp= BitmapFactory.decodeResource(resources, R.mipmap.arraw)
         var valueAnimator=  ValueAnimator.ofFloat(0f,1f).setDuration(2000)
         valueAnimator.addUpdateListener {
             currentFloat=it.getAnimatedValue() as Float
@@ -31,8 +33,12 @@ class PathView: View{
         valueAnimator.repeatCount=ValueAnimator.INFINITE
        // valueAnimator.interpolator=BounceInterpolator()
         valueAnimator.start()
+
     }
 
+     var pos =FloatArray(2)
+     var tan=FloatArray(2)
+  var   mArrayBmp:Bitmap?=null
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
         var paint= Paint()
@@ -40,7 +46,7 @@ class PathView: View{
         paint.strokeWidth=2f
         paint.style=Paint.Style.STROKE
         var path=Path()
-        canvas.translate(200f,200f)
+        canvas.translate(100f,100f)
 /*
 
 
@@ -58,7 +64,7 @@ class PathView: View{
 */
 
 
-     /*
+/*        一般获取最外面的轮廓
         path.addRect(-50f,-50f,50f,50f,Path.Direction.CCW)
         path.addRect(-100f,-100f,100f,100f,Path.Direction.CCW)
         path.addRect(-120f,-120f,120f,120f,Path.Direction.CW)
@@ -71,22 +77,34 @@ class PathView: View{
         }while (measure.nextContour())*/
 
 
-        path.addCircle(100f,100f,50f,Path.Direction.CW)
+        path.addCircle(10f,10f,mArrayBmp!!.width.toFloat(),Path.Direction.CW)
         canvas.drawPath(path,paint)
         var dst=Path()
-        dst.lineTo(10f,100f)
-        var measure=PathMeasure(path,false)
+       // dst.lineTo(10f,100f)
+        var pathMeasure=PathMeasure(path,false)
 
 
-        var stop=currentFloat*measure.length
-        var start=stop-(0.5f-Math.abs(currentFloat-0.5f))*measure.length
-        Log.i("qijian","len="+start)
+        var stop=currentFloat*pathMeasure.length
+        var start=stop-(0.5f-Math.abs(currentFloat-0.5f))*pathMeasure.length
+
         //最后一个函数，如果startWithmoveTo为true，路径起始点移动到新添加路径的起始点，否则使用之前的路径直接连过来，不会调用moveto
-      //  dst.reset()
-        measure.getSegment(start,stop,dst,true)
+
+        pathMeasure.getSegment(start,stop,dst,true)
         paint.setColor(Color.RED)
         canvas.drawPath(dst,paint)
+        //旋转箭头图片
+       /* pathMeasure.getPosTan(stop,pos,tan)
+        var degrees=(Math.atan2(tan.get(1).toDouble(), tan.get(0).toDouble())*180f/Math.PI).toFloat()
+        var matrix=Matrix();
+        matrix.postRotate(degrees,mArrayBmp!!.width/2f,mArrayBmp!!.height/2f)
+        matrix.postTranslate(pos[0]-mArrayBmp!!.width/2f,pos[1]-mArrayBmp!!.height/2f)
 
+        canvas.drawBitmap(mArrayBmp!!,matrix,paint)*/
 
+        //计算角方位
+        var matrix=Matrix();
+        pathMeasure.getMatrix(stop,matrix,PathMeasure.POSITION_MATRIX_FLAG or PathMeasure.TANGENT_MATRIX_FLAG)
+        matrix.preTranslate(-mArrayBmp!!.width/2f,-mArrayBmp!!.height/2f)
+        canvas.drawBitmap(mArrayBmp!!,matrix,paint)
     }
 }
