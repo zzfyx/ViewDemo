@@ -3,21 +3,24 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/ZhyWork/Android/config/.gradle/caches/transforms-3/ac375104de085662f422500d696b150e/transformed/jetified-appcompat-resources-1.2.0/res/drawable/abc_vector_test.xml" value="0.37552083333333336" />
-        <entry key="..\:/tools/ViewDemo/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.37552083333333336" />
-        <entry key="..\:/tools/ViewDemo/app/src/main/res/drawable/animated_verctor_search.xml" value="0.37552083333333336" />
-        <entry key="..\:/tools/ViewDemo/app/src/main/res/drawable/ic_android_black_24dp.xml" value="0.37552083333333336" />
-        <entry key="..\:/tools/ViewDemo/app/src/main/res/drawable/line_animated_verctor.xml" value="0.37552083333333336" />
-        <entry key="..\:/tools/ViewDemo/app/src/main/res/drawable/selector_svg_line.xml" value="0.37552083333333336" />
-        <entry key="..\:/tools/ViewDemo/app/src/main/res/drawable/vector_search_bar.xml" value="0.37552083333333336" />
+        <entry key="..\:/ZhyAPP/ViewDemo/app/src/main/res/drawable/animated_verctor_search.xml" value="0.25416666666666665" />
+        <entry key="..\:/ZhyAPP/ViewDemo/app/src/main/res/drawable/ic_android_black_24dp.xml" value="0.25416666666666665" />
+        <entry key="..\:/ZhyAPP/ViewDemo/app/src/main/res/drawable/ic_launcher_background.xml" value="0.26564102564102565" />
+        <entry key="..\:/ZhyAPP/ViewDemo/app/src/main/res/drawable/line_animated_verctor.xml" value="0.25416666666666665" />
+        <entry key="..\:/ZhyAPP/ViewDemo/app/src/main/res/drawable/scan_circle.xml" value="0.26564102564102565" />
+        <entry key="..\:/ZhyAPP/ViewDemo/app/src/main/res/drawable/vector_search_bar.xml" value="0.25416666666666665" />
+        <entry key="..\:/ZhyAPP/ViewDemo/app/src/main/res/layout/activity_l2.xml" value="0.18931159420289856" />
+        <entry key="..\:/ZhyAPP/ViewDemo/app/src/main/res/layout/activity_lin3.xml" value="0.24864130434782608" />
+        <entry key="..\:/ZhyAPP/ViewDemo/app/src/main/res/layout/activity_lin4.xml" value="0.21829710144927536" />
+        <entry key="..\:/ZhyAPP/ViewDemo/app/src/main/res/layout/activity_lin5.xml" value="0.22135416666666666" />
+        <entry key="..\:/ZhyAPP/ViewDemo/app/src/main/res/layout/activity_lin6.xml" value="0.1734375" />
+        <entry key="..\:/ZhyAPP/ViewDemo/app/src/main/res/layout/sample_my_text_view.xml" value="0.12916666666666668" />
         <entry key="..\:/tools/ViewDemo/app/src/main/res/layout/activity_l2.xml" value="0.28072916666666664" />
-        <entry key="..\:/tools/ViewDemo/app/src/main/res/layout/activity_lin3.xml" value="0.21354166666666666" />
-        <entry key="..\:/tools/ViewDemo/app/src/main/res/layout/activity_lin5.xml" value="0.1" />
         <entry key="..\:/tools/ViewDemo/app/src/main/res/layout/activity_main.xml" value="0.28072916666666664" />
         <entry key="..\:/tools/ViewDemo/app/src/main/res/layout/recy_item.xml" value="0.28072916666666664" />
       </map>
     </option>
   </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
 </project>

@@ -6,5 +6,5 @@
     android:name="bar"
     android:animation="@animator/anim_trim_start"></target>
 
-    
+
 </animated-vector>
