@@ -73,6 +73,12 @@ class PaintView: View{
         paint.textSize=120f
         paint.textAlign=Paint.Align.LEFT
         paint.color=Color.YELLOW
+        paint.setPathEffect(CornerPathEffect(10f))
+        paint.setStrokeJoin(Paint.Join.MITER)
+        paint.isUnderlineText=true//下划线
+        paint.isStrikeThruText=true//加粗
+        paint.textSkewX=0.1f//水平倾斜
+        paint.isSubpixelText=true//亚像素
         //画top线
         canvas.drawLine(baseLineX,top,3000f,top,paint)
         var fm=paint.getFontMetricsInt()
@@ -85,7 +91,7 @@ class PaintView: View{
         canvas.drawText(text,baseLineX,baseLineY,paint)
         var rect=Rect()
         paint.getTextBounds(text,0,text.length,rect)
-
+        canvas.drawRect(rect,paint)
         //baseline= center + (FontMetrics.bottom - FontMetrics.top)/2 -FontMetrics.bottom
     }
     fun getBaseline(p: Paint): Float {
