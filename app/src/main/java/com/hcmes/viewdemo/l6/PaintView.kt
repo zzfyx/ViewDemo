@@ -4,6 +4,8 @@ import android.content.Context
 import android.graphics.*
 import android.util.AttributeSet
 import android.view.View
+import androidx.core.view.marginTop
+
 class PaintView: View{
     constructor(context: Context?) : super(context)
     constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs){
@@ -24,7 +26,7 @@ class PaintView: View{
     }
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
-        var baseLineX=0f
+   /*     var baseLineX=0f
         var baseLineY=200f
         //画基线
         var paint=Paint()
@@ -55,8 +57,39 @@ class PaintView: View{
         canvas.drawLine(baseLineX,bottom,3000f,bottom,paint)
 
         //得到文字高度
-
         var height=bottom-top;
-        var widht= paint.measureText("")
+        //得到文字的宽度
+        var widht= paint.measureText("")*/
+
+        draw1(canvas)
+
+    }
+    fun draw1(canvas: Canvas){
+        //根据矩形左上角绘制文字过程
+        var text="harvic\\'s blog"
+        var top=0f
+        var baseLineX=0f
+        var paint=Paint()
+        paint.textSize=120f
+        paint.textAlign=Paint.Align.LEFT
+        paint.color=Color.YELLOW
+        //画top线
+        canvas.drawLine(baseLineX,top,3000f,top,paint)
+        var fm=paint.getFontMetricsInt()
+        var baseLineY=top-fm.top
+        //画基线
+        paint.color=Color.RED
+        canvas.drawLine(baseLineX,baseLineY,3000f,baseLineY,paint)
+        //写文字
+        paint.setColor(Color.GREEN)
+        canvas.drawText(text,baseLineX,baseLineY,paint)
+        var rect=Rect()
+        paint.getTextBounds(text,0,text.length,rect)
+
+        //baseline= center + (FontMetrics.bottom - FontMetrics.top)/2 -FontMetrics.bottom
+    }
+    fun getBaseline(p: Paint): Float {
+        val fontMetrics = p.fontMetricsInt
+        return (fontMetrics.descent - fontMetrics.ascent) / 2f - fontMetrics.descent
     }
 }
