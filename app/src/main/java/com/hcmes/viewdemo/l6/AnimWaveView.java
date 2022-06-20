@@ -3,6 +3,7 @@ package com.hcmes.viewdemo.l6;
 import android.animation.ValueAnimator;
 import android.content.Context;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.util.AttributeSet;
@@ -58,6 +59,7 @@ public class AnimWaveView extends View {
         canvas.clipPath(cirPath);
 
         super.onDraw(canvas);
+        mCirPaint.setShadowLayer(1,10,10, Color.GRAY);
         canvas.drawCircle(getWidth() / 2, getHeight() / 2, getWidth() / 2, mCirPaint);
         mPath.reset();
 

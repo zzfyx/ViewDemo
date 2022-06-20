@@ -30,5 +30,16 @@
             android:layout_width="200dp"
             android:layout_height="200dp"
             android:layout_margin="10dp"/>
+
+        <com.hcmes.viewdemo.l6.BitmapShadowView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"></com.hcmes.viewdemo.l6.BitmapShadowView>
+        <com.hcmes.viewdemo.l6.TelescopeView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"></com.hcmes.viewdemo.l6.TelescopeView>
+        <com.hcmes.viewdemo.l6.ShimmerTextView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:text="我要的闪光文字"></com.hcmes.viewdemo.l6.ShimmerTextView>
     </androidx.appcompat.widget.LinearLayoutCompat>
 </androidx.core.widget.NestedScrollView>
