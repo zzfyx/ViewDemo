@@ -11,6 +11,7 @@ import android.graphics.Paint;
 import android.graphics.RadialGradient;
 import android.graphics.RectF;
 import android.graphics.Shader;
+import android.graphics.drawable.GradientDrawable;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
@@ -102,5 +103,6 @@ public class TelescopeView extends View {
             mPaint.setShader(mRadialGradient);
             canvas.drawCircle(getWidth()/2 , getHeight()/2 , mRadius, mPaint) ;
         }
+        GradientDrawable gradientDrawable=new GradientDrawable();
     }
 }

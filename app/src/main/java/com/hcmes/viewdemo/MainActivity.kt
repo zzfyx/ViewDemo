@@ -15,6 +15,8 @@ import com.hcmes.viewdemo.l3.Lin3Activity
 import com.hcmes.viewdemo.l4.Lin4Activity
 import com.hcmes.viewdemo.l5.Lin5Activity
 import com.hcmes.viewdemo.l6.Lin6Activity
+import com.hcmes.viewdemo.l8.Lin8Activity
+import com.hcmes.viewdemo.m1.M1Activity
 import java.util.ArrayList
 
 class MainActivity : AppCompatActivity() {
@@ -29,6 +31,9 @@ class MainActivity : AppCompatActivity() {
         array.add(ListDemo("布局动画", Lin4Activity::class.java))
         array.add(ListDemo("PathMeasure", Lin5Activity::class.java))
         array.add(ListDemo("Path", Lin6Activity::class.java))
+        array.add(ListDemo("Xfermode", Lin8Activity::class.java))
+
+        array.add(ListDemo("MotionLayout", M1Activity::class.java))
         recyclerView=  findViewById<RecyclerView>(R.id.recyclerView);
         var manager=  LinearLayoutManager(this@MainActivity)
         manager.setOrientation(RecyclerView.VERTICAL)

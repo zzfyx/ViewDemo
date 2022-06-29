@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CosumeViewDemo">
         <activity
+            android:name=".m1.M1Activity"
+            android:exported="true" />
+        <activity
+            android:name=".l8.Lin8Activity"
+            android:exported="true" />
+        <activity
             android:name=".l6.Lin6Activity"
             android:exported="true" />
         <activity
