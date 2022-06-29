@@ -2,7 +2,6 @@ package com.hcmes.viewdemo.l6
 
 import android.content.Context
 import android.graphics.*
-import android.graphics.drawable.ShapeDrawable
 import android.util.AttributeSet
 import android.view.View
 import androidx.core.view.marginTop

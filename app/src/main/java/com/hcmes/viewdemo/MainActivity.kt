@@ -11,12 +11,13 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.hcmes.viewdemo.l2.Lin2Activity
 import com.hcmes.viewdemo.l1.Lin1Activity
+import com.hcmes.viewdemo.l10.Lin10Activity
 import com.hcmes.viewdemo.l3.Lin3Activity
 import com.hcmes.viewdemo.l4.Lin4Activity
 import com.hcmes.viewdemo.l5.Lin5Activity
 import com.hcmes.viewdemo.l6.Lin6Activity
+import com.hcmes.viewdemo.l7.Lin7Activity
 import com.hcmes.viewdemo.l8.Lin8Activity
-import com.hcmes.viewdemo.m1.M1Activity
 import java.util.ArrayList
 
 class MainActivity : AppCompatActivity() {
@@ -31,9 +32,9 @@ class MainActivity : AppCompatActivity() {
         array.add(ListDemo("布局动画", Lin4Activity::class.java))
         array.add(ListDemo("PathMeasure", Lin5Activity::class.java))
         array.add(ListDemo("Path", Lin6Activity::class.java))
-        array.add(ListDemo("Xfermode", Lin8Activity::class.java))
-
-        array.add(ListDemo("MotionLayout", M1Activity::class.java))
+        array.add(ListDemo("贝塞尔曲线", Lin7Activity::class.java))
+        array.add(ListDemo("PorterDuffXfermode", Lin8Activity::class.java))
+        array.add(ListDemo("画布Drawable", Lin10Activity::class.java))
         recyclerView=  findViewById<RecyclerView>(R.id.recyclerView);
         var manager=  LinearLayoutManager(this@MainActivity)
         manager.setOrientation(RecyclerView.VERTICAL)

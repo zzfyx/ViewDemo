@@ -10,10 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CosumeViewDemo">
         <activity
-            android:name=".m1.M1Activity"
+            android:name=".l10.Lin10Activity"
             android:exported="true" />
         <activity
             android:name=".l8.Lin8Activity"
+            android:exported="true" />
+        <activity
+            android:name=".l7.Lin7Activity"
             android:exported="true" />
         <activity
             android:name=".l6.Lin6Activity"
@@ -32,7 +35,6 @@
             android:exported="true" />
         <activity
             android:name=".l1.Lin1Activity"
-            android:hardwareAccelerated="true"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
