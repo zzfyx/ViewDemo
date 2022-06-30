@@ -32,6 +32,7 @@
             android:exported="true" />
         <activity
             android:name=".l1.Lin1Activity"
+            android:hardwareAccelerated="true"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
