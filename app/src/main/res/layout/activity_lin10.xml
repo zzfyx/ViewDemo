@@ -6,6 +6,23 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".l10.Lin10Activity">
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"  />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="切过"
+        ></TextView>
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="match_parent"
+        android:layout_height="80dp" />
+
+
     <Button
         android:id="@+id/add_shape_corner"
         android:layout_width="match_parent"
@@ -23,7 +40,7 @@
 
     <com.hcmes.viewdemo.l10.ShapeView
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="20dp"
         android:layout_margin="10dp"
         android:background="#ffffff"
         ></com.hcmes.viewdemo.l10.ShapeView>
@@ -32,6 +49,8 @@
         android:layout_width="match_parent"
         android:background="#ffffff"
         android:layout_margin="10dp"
-        android:layout_height="150dp"></com.hcmes.viewdemo.l10.ShapeShaderView>
+        android:layout_height="20dp"></com.hcmes.viewdemo.l10.ShapeShaderView>
+
+
 
 </LinearLayout>

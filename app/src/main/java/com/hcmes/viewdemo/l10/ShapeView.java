@@ -30,10 +30,15 @@ public class ShapeView extends View {
         super(context, attrs);
         init();
     }
+    public ShapeView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+        init();
+    }
+
 
     private void init() {
         setLayerType(LAYER_TYPE_SOFTWARE,null);
-        mShapeDra = new ShapeDrawable(new RectShape());
+     /*   mShapeDra = new ShapeDrawable(new RectShape());
         mShapeDra = new ShapeDrawable(new OvalShape());
         mShapeDra = new ShapeDrawable(new ArcShape(0,300));
         mShapeDra = new ShapeDrawable(new RoundRectShape(new float[]{12,12,12,12,0,0,0,0},new RectF(6,6,6,6),new float[]{50,12,0,12,50,0,0}));
@@ -43,31 +48,27 @@ public class ShapeView extends View {
           path.lineTo(100,0);
           path.lineTo(100,100);
           path.lineTo(0,100);
-          path.close();
+          path.close();*/
 
-          Rect rect1=new Rect(50,0,90,150);
+        /*  Rect rect1=new Rect(50,0,90,150);
           Rect rect2=new Rect(0,50,250,100);
           Region region=new Region(rect1);
           Region region2=new Region(rect2);
          region.op(region2,Region.Op.XOR);
-         mShapeDra = new ShapeDrawable(new RegionShape(region));
+         mShapeDra = new ShapeDrawable(new RegionShape(region));*/
 
 
-        mShapeDra = new ShapeDrawable(new PathShape(path,100,100));
+    //    mShapeDra = new ShapeDrawable(new PathShape(path,100,100));
 
 
-        mShapeDra.setBounds(new Rect(50,50,200,100));
-        mShapeDra.getPaint().setColor(Color.YELLOW);
+       /* mShapeDra.setBounds(new Rect(50,50,200,100));
+        mShapeDra.getPaint().setColor(Color.YELLOW);*/
     }
 
-    public ShapeView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
-
-    }
 
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        mShapeDra.draw(canvas);
+      //  mShapeDra.draw(canvas);
     }
 }

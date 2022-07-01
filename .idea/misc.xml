@@ -12,6 +12,7 @@
         <entry key="..\:/tools/ViewDemo/app/src/main/res/drawable/vector_search_bar.xml" value="0.37552083333333336" />
         <entry key="..\:/tools/ViewDemo/app/src/main/res/layout/activity_l1.xml" value="0.34322916666666664" />
         <entry key="..\:/tools/ViewDemo/app/src/main/res/layout/activity_l2.xml" value="0.28072916666666664" />
+        <entry key="..\:/tools/ViewDemo/app/src/main/res/layout/activity_lin10.xml" value="0.11927083333333334" />
         <entry key="..\:/tools/ViewDemo/app/src/main/res/layout/activity_lin3.xml" value="0.21354166666666666" />
         <entry key="..\:/tools/ViewDemo/app/src/main/res/layout/activity_lin5.xml" value="0.1" />
         <entry key="..\:/tools/ViewDemo/app/src/main/res/layout/activity_lin6.xml" value="0.2869791666666667" />
@@ -24,5 +25,5 @@
     </option>
   </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
 </project>
