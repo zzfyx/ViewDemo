@@ -1,56 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".l10.Lin10Activity">
-    <ImageView
-        android:id="@+id/imageView3"
+    android:layout_height="match_parent">
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="80dp"  />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".l10.Lin10Activity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="切过"
-        ></TextView>
+        <com.hcmes.viewdemo.l10.BitMapView
+            android:layout_width="match_parent"
+            android:layout_height="500dp"/>
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"  />
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="match_parent"
-        android:layout_height="80dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="切过"
+            ></TextView>
 
-
-    <Button
-        android:id="@+id/add_shape_corner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="添加圆角"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="shape标签实例"
-        android:padding="10dp"
-        android:layout_margin="39dp"
-        android:background="@drawable/shapesolid"
-        />
-
-    <com.hcmes.viewdemo.l10.ShapeView
-        android:layout_width="match_parent"
-        android:layout_height="20dp"
-        android:layout_margin="10dp"
-        android:background="#ffffff"
-        ></com.hcmes.viewdemo.l10.ShapeView>
-
-    <com.hcmes.viewdemo.l10.ShapeShaderView
-        android:layout_width="match_parent"
-        android:background="#ffffff"
-        android:layout_margin="10dp"
-        android:layout_height="20dp"></com.hcmes.viewdemo.l10.ShapeShaderView>
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="match_parent"
+            android:layout_height="80dp" />
 
 
+        <Button
+            android:id="@+id/add_shape_corner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="添加圆角"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="39dp"
+            android:background="@drawable/shapesolid"
+            android:padding="10dp"
+            android:text="shape标签实例"
+            />
 
-</LinearLayout>
+        <com.hcmes.viewdemo.l10.ShapeView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_margin="10dp"
+            android:background="#ffffff"
+            ></com.hcmes.viewdemo.l10.ShapeView>
+
+        <com.hcmes.viewdemo.l10.ShapeShaderView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_margin="10dp"
+            android:background="#ffffff"></com.hcmes.viewdemo.l10.ShapeShaderView>
+
+        <com.hcmes.viewdemo.l10.SurfaceGesturePath
+            android:layout_width="match_parent"
+            android:layout_height="100dp"></com.hcmes.viewdemo.l10.SurfaceGesturePath>
+        <com.hcmes.viewdemo.l10.AnimationSurfaceView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"/>
+
+        <com.hcmes.viewdemo.l10.DoubleBufferingView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"></com.hcmes.viewdemo.l10.DoubleBufferingView>
+
+        <com.hcmes.viewdemo.l10.InvertedImageView_SRCIN
+            android:layout_width="300dp"
+            android:layout_height="300dp"></com.hcmes.viewdemo.l10.InvertedImageView_SRCIN>
+        <com.hcmes.viewdemo.l10.DogView_SRCOUT
+            android:layout_width="match_parent"
+            android:layout_height="300dp"></com.hcmes.viewdemo.l10.DogView_SRCOUT>
+        <com.hcmes.viewdemo.l10.GuaGuaCardView_SRCOUT
+            android:layout_width="match_parent"
+            android:layout_height="300dp"></com.hcmes.viewdemo.l10.GuaGuaCardView_SRCOUT>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

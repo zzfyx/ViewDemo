@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.hcmes.viewdemo.l2.Lin2Activity
 import com.hcmes.viewdemo.l1.Lin1Activity
 import com.hcmes.viewdemo.l10.Lin10Activity
+import com.hcmes.viewdemo.l11.Lin11Activity
 import com.hcmes.viewdemo.l3.Lin3Activity
 import com.hcmes.viewdemo.l4.Lin4Activity
 import com.hcmes.viewdemo.l5.Lin5Activity
@@ -35,6 +36,7 @@ class MainActivity : AppCompatActivity() {
         array.add(ListDemo("贝塞尔曲线", Lin7Activity::class.java))
         array.add(ListDemo("PorterDuffXfermode", Lin8Activity::class.java))
         array.add(ListDemo("画布Drawable", Lin10Activity::class.java))
+        array.add(ListDemo("surfaceView", Lin11Activity::class.java))
         recyclerView=  findViewById<RecyclerView>(R.id.recyclerView);
         var manager=  LinearLayoutManager(this@MainActivity)
         manager.setOrientation(RecyclerView.VERTICAL)
