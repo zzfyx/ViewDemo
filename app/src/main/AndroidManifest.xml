@@ -22,6 +22,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CosumeViewDemo">
         <activity
+            android:name=".l12.Lin12Activity"
+            android:exported="true" />
+        <activity
             android:name=".l11.Lin11Activity"
             android:exported="true" />
         <activity
