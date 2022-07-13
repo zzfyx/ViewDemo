@@ -16,8 +16,6 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import com.hcmes.viewdemo.R;
 
-import java.util.prefs.PreferenceChangeEvent;
-
 //    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
 public class WindowDialog {
     Context context;
@@ -26,6 +24,8 @@ public class WindowDialog {
         this.context = context;
 
     }
+    float moveX,moveY,rowX,rowY;
+
     public void show(){
         WindowManager mWindowManager = (WindowManager) context.getApplicationContext().getSystemService(Context.WINDOW_SERVICE);
         mLayoutParams =new WindowManager.LayoutParams(
@@ -38,7 +38,7 @@ public class WindowDialog {
         mLayoutParams.type = WindowManager .LayoutParams.TYPE_SYSTEM_ERROR;
         mLayoutParams.gravity = Gravity.TOP|Gravity . LEFT;
         mLayoutParams.x = 0;
-        mLayoutParams.y = 300 ;
+        mLayoutParams.y = 0 ;
         ImageView view= new ImageView(context);
         view.setImageResource(R.drawable.pic_1);
         GestureDetector gestureDetector=new GestureDetector(context,new GestureDetector.SimpleOnGestureListener(){
@@ -62,9 +62,15 @@ public class WindowDialog {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        moveX = event.getX();
+                        moveY = event.getY();
+                        rowX = event.getRawX();
+                        rowY = event.getRawY();
+                        break;
                     case MotionEvent.ACTION_MOVE:
-                        mLayoutParams.x = (int) ( (event.getRawX()));
-                        mLayoutParams.y= (int) ((event.getRawY()));
+                        mLayoutParams.x = (int) (moveX+ (event.getRawX())-rowX);
+                        mLayoutParams.y= (int) ((moveY+event.getRawY())-rowY);
                         mWindowManager.updateViewLayout(view, mLayoutParams);
                         break;
                     case MotionEvent.ACTION_UP:
@@ -72,8 +78,7 @@ public class WindowDialog {
                     case MotionEvent.ACTION_CANCEL:
                         break;
                 }
-                return  false;
-               // return   gestureDetector.onTouchEvent(event);
+                return   gestureDetector.onTouchEvent(event);
             }
         });
         mWindowManager.addView(view, mLayoutParams) ;
