@@ -26,6 +26,17 @@ public class WindowDialog {
     }
     float moveX,moveY,rowX,rowY;
 
+    /**
+     * 获取状态栏高度
+     *
+     * @param context 目标Context
+     */
+    public static int getStatusBarHeight(Context context) {
+        // 获得状态栏高度
+        int resourceId = context.getResources().getIdentifier("status_bar_height", "dimen", "android");
+        return context.getResources().getDimensionPixelSize(resourceId);
+    }
+
     public void show(){
         WindowManager mWindowManager = (WindowManager) context.getApplicationContext().getSystemService(Context.WINDOW_SERVICE);
         mLayoutParams =new WindowManager.LayoutParams(
@@ -69,8 +80,8 @@ public class WindowDialog {
                         rowY = event.getRawY();
                         break;
                     case MotionEvent.ACTION_MOVE:
-                        mLayoutParams.x = (int) (moveX+ (event.getRawX())-rowX);
-                        mLayoutParams.y= (int) ((moveY+event.getRawY())-rowY);
+                        mLayoutParams.x = (int) (event.getRawX()-moveX);
+                        mLayoutParams.y= (int) (event.getRawY()-moveY-getStatusBarHeight(context));
                         mWindowManager.updateViewLayout(view, mLayoutParams);
                         break;
                     case MotionEvent.ACTION_UP:
@@ -82,8 +93,5 @@ public class WindowDialog {
             }
         });
         mWindowManager.addView(view, mLayoutParams) ;
-
-
-
     }
 }
